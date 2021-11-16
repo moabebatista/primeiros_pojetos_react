@@ -1,0 +1,110 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #456392;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    min-height: 100vh;
+}
+
+.App {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background: #FFFFFF;
+
+    width: 300px;
+    height: 410px;
+
+    padding: 22px;
+    padding-bottom: 40px;
+    border-radius: 20px;
+}
+
+.card img {
+    border: 9px solid #ECF3FC;
+    border-radius: 50%;
+
+    margin-bottom: 30px;
+}
+
+.card h2 {
+    font-family: 'Mulish', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 30px;
+    text-align: center;
+
+    color: #131E30;
+
+    margin-bottom: 8px;
+}
+
+.card .username {
+    font-family: 'Mulish', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 23px;
+
+    text-align: center;
+
+    color: #131E30;
+
+    margin-bottom: 70px;
+}
+
+.card .stats {
+    font-family: 'Mulish', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 23px;
+    text-align: center;
+
+    color: #000000;
+}
+
+.seguir, .seguindo {
+    all: unset;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    font-family: 'Mulish', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 23px;
+
+    cursor: pointer;
+
+    width: 300px;
+    height: 62px;
+
+    background: #459275;
+    border-radius: 8px;
+
+    color: white;
+}
+
+.seguindo {
+    background: #97CEB9;
+}

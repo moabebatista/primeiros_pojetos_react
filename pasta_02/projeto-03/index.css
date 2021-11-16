@@ -1,0 +1,109 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #456392;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    min-height: 100vh;
+}
+
+.App {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+
+    font-family: 'Mulish', sans-serif;
+    font-style: normal;
+
+    background-color: #FFFFFF;
+
+    border-radius: 12px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 300px;
+    height: 360px;
+
+    padding-bottom: 40px;
+    border-radius: 12px;
+}
+
+.card h2, span, img {
+    text-align: center;
+    color: #131E30;
+    margin-bottom: 8px;
+}
+
+.card img {
+    width: 300px;
+    border-radius: 12px 12px 0px 0px;
+}
+
+.card h2 {
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 30px;
+}
+
+.card span {
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 18px;
+
+    margin-bottom: 60px
+}
+
+.botoes {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 253px;
+    height: 47px;
+
+    font-size: 36px;
+    line-height: 45px;
+
+    padding: 22px;
+    padding-bottom: 40px;
+}
+
+.menos, .mais {
+    all: unset;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 45px;
+
+    cursor: pointer;
+
+    width: 38.54px;
+    height: 46px;
+
+    background: #459275;
+    border-radius: 8px;
+
+    color: white;
+}
+
+button:hover {
+    background: #aadfca;
+    color: #131E30;
+}
