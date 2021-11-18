@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+body {
+    position: relative;
+    background-image: url(./assets/background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-width: 100vh;
+}
+  
+.App {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+
+    font-family: 'Josefin Sans', sans-serif;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  
+    min-height: 100vh;
+}
+
+
+
+.App h1 {
+    position: absolute;
+    top: 70px;
+    z-index: 2;
+
+    font-style: normal;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 40px;
+
+    letter-spacing: 15px;
+
+    color: #FFFFFF;
+}
+
+.App input {
+    all: unset;
+
+    width: 515px;
+    height: 64px;
+
+    position: absolute;
+    z-index: 2;
+    top: 160px;
+
+    padding-left: 25px;
+
+    margin-bottom: 25px;
+
+    background: #FFFFFF;
+    box-shadow: 0px 35px 50px -15px rgba(194, 195, 214, 0.5);
+    border-radius: 5px;
+}
+
+.bloco {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+    z-index: 2;
+    top: 240px;
+
+    background: #FFFFFF;
+
+    box-shadow: 0px 35px 50px -15px rgba(194, 195, 214, 0.5);
+    border-radius: 5px;
+}
+
+.bloco li {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    padding: 20px 25px;
+
+    background-color: #FFFFFF;
+    border-radius: 5px 5px 0px 0px;
+    border-bottom: solid 1px #E3E4F1;
+    width: 540px;
+
+    cursor: pointer;
+    margin-bottom: 1px;
+
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 18px;
+    letter-spacing: -0.25px;
+
+    color: #494C6B;
+
+}
+
+.atividades {
+    padding: 20px 25px;
+    width: 540px;
+
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 14px;
+
+    letter-spacing: -0.194444px;
+    color: #9495A5;
+
+    cursor: pointer;
+}
+
+.itens-restantes {
+    margin-right: 45px;
+}
+
+.todas, .ativas {
+    margin-right: 10px;
+    font-style: bold;
+}
+
+.todas {
+    color: #3A7CFD;
+}
+
+.completada {
+    margin-right: 25px;
+    font-style: bold;
+}
+
+.ativas:hover, .completada:hover, .limpar-completadas:hover {
+    color: #494C6B;
+}
