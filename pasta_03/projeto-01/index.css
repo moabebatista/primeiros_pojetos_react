@@ -130,15 +130,11 @@ body {
     font-style: bold;
 }
 
-.todas {
-    color: #3A7CFD;
-}
-
 .completada {
     margin-right: 25px;
     font-style: bold;
 }
 
-.ativas:hover, .completada:hover, .limpar-completadas:hover {
+.limpar-completadas:hover {
     color: #494C6B;
 }

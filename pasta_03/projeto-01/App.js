@@ -17,18 +17,18 @@ function Tarefa (props) {
       {props.children}
     </span>
     <img
-    onClick={() => props.handleDelete(props.id)} 
-    src={btnDelete} alt="X"
+      onClick={() => props.handleDelete(props.id)} 
+      src={btnDelete} alt="X"
     />
     </li>
   )
 }
 
-const BotoesParaFiltros = ({ setFiltrar, valor, children }) => (
+const BotoesParaFiltros = ({ filtragem, texto, children, style }) => (
   <span 
-  className={valor} 
-  onClick={() => setFiltrar(valor)}
-  
+    className={texto} 
+    onClick={() => filtragem(texto)}
+    style = {style}
   >
     {children}
   </span>
@@ -40,7 +40,8 @@ function App() {
   const [filtrar, setFiltrar] = useState("todas");
 
   const filtrarTarefas = tarefas.filter((tarefa) =>
-  filtrar === "completada" ? tarefa.completa : filtrar === "ativas" ? !tarefa.completa : true
+  filtrar === "completada" ? tarefa.completa : 
+  filtrar === "ativas" ? !tarefa.completa : true
   );
 
   function handleKeyDown(event) {
@@ -72,7 +73,7 @@ function App() {
     const tarefaCompletada = novasTarefas.find(function (tarefa) {
       return tarefa.id === id;
     });
-
+    
     tarefaCompletada.completa = !tarefaCompletada.completa;
 
     if (!tarefaCompletada.completa) {
@@ -82,7 +83,7 @@ function App() {
     }
 
     setTarefas(novasTarefas);
-
+    
   }
 
   function handleLimpar() {
@@ -95,17 +96,21 @@ function App() {
   return (
     <div className="App">
       <h1>TAREFAS</h1>
-      <input type="text" onKeyDown={handleKeyDown} />
+      <input 
+        type="text" 
+        onKeyDown={handleKeyDown} 
+        placeholder="Criar uma nova tarefa"
+      />
       <div className="bloco">
           <ul>
             {filtrarTarefas.map(function (tarefa){
             return (
               <Tarefa
-              key={tarefa.id}
-              id={tarefa.id}
-              handleDelete={handleDelete}
-              handleComplete={handleComplete}
-              completa={tarefa.completa}
+                key={tarefa.id}
+                id={tarefa.id}
+                handleDelete={handleDelete}
+                handleComplete={handleComplete}
+                completa={tarefa.completa}
               >
                 {tarefa.texto}
               </Tarefa>
@@ -115,24 +120,32 @@ function App() {
           <div className='atividades'>
             <span className="itens-restantes">{tarefaAtiva} Itens restantes</span>
             <BotoesParaFiltros
-            setFiltrar={setFiltrar}
-            valor="todas"
+              filtragem={setFiltrar}
+              texto="todas"
+              style={{color: filtrar === "todas" ? '#3A7CFD' : '#9495A5',}}
             >
               Todas
             </BotoesParaFiltros>
             <BotoesParaFiltros
-            setFiltrar={setFiltrar}
-            valor="ativas"
+              filtragem={setFiltrar}
+              texto="ativas"
+              style={{color: filtrar === "ativas" ? '#3A7CFD' : '#9495A5'}}
             >
               Ativas
             </BotoesParaFiltros>
             <BotoesParaFiltros
-            setFiltrar={setFiltrar}
-            valor="completada"
+              filtragem={setFiltrar}
+              texto="completada"
+              style={{color: filtrar === "completada" ? '#3A7CFD' : '#9495A5'}}
             >
               Completada
             </BotoesParaFiltros>
-            <span className="limpar-completadas" onClick={handleLimpar}>Limpar Completadas</span>
+            <span 
+              className="limpar-completadas" 
+              onClick={handleLimpar}
+            >
+              Limpar Completadas
+            </span>
       </div>
           </div>
     </div>
