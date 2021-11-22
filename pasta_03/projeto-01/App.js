@@ -146,8 +146,8 @@ function App() {
             >
               Limpar Completadas
             </span>
-      </div>
           </div>
+      </div>
     </div>
   );
 }
